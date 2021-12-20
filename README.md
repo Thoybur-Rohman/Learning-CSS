@@ -1,6 +1,7 @@
 # FirstWebPage
 
-##Learning objectives
+#Learning objectives
+
 Writing basic selectors
 Setting properties
 Cascade and inheritance
