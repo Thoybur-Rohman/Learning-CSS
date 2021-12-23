@@ -11,29 +11,43 @@ https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
 
 /* Global styles
 ------------------------------------*/
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: border-box;
+}
 body {
   color: #343434;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
 }
-img {
-  width: 300px;
-}
+
 a {
-  color: #c4ab2d;
+  color: #FFE66D;
 }
 a:hover {
   text-decoration: none;
 }
-h2{
+h1{
+ font-size: 95px;
+ line-height: 1.5;
+}
+
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 300;
   margin: 0;
 }
 .content-wrap {
-  width: 800px;
+  max-width: 800px;
+  width: 85%;
   margin: 0 auto;
-  padding: 55px 0;
+  padding: 40px 0;
 }
-
 
 
 /* Profile
@@ -41,6 +55,7 @@ h2{
 header {
   background: #2F3061;
   color: #F7FFF7;
+  
 }
 
 
@@ -48,26 +63,39 @@ header {
 ------------------------------------*/
 .projects {
   background: #F7FFF7;
+   margin-top: 0px;
+   margin-bottom: 0%;
+   padding-bottom: 0px;
+   
 }
 .projects a {
-  color: #2F3061; 
+  color: #2F3061;
+  padding:5px;
+  font-size:large;
 }
 .projects .btn {
-  padding: 8px;
-  margin: 2px;
+  border-radius: 5px;
   text-decoration: none;
   /* other styling */
   background-color: #33475b;
-  border-radius: 8px;
   color: white;
-  font-family: Avenir;/* Profile
-This adds a font*/
+  font-family: Avenir;
+}
+.content-list{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.content-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .projects .btn:hover {
   background: rgba(41, 5, 119, 0.8);
 }
-
-
 /* Work Experience
 ------------------------------------*/
 .work-experience {
@@ -75,9 +103,15 @@ This adds a font*/
 }
 
 
+
 /* Education
 ------------------------------------*/
+.education{
+background-image: url(../Images/joanna-kosinska-unsplash.jpg);
+background-size:cover;
+background-position: top right;
 
+}
 
 
 /* Contact Info
@@ -85,4 +119,53 @@ This adds a font*/
 footer {
   background: #343434;
   color: #F7FFF7;
+}
+
+
+/* Responsive
+------------------------------------*/
+@media screen and (min-width:750px){
+  header, footer {
+    text-align: center;
+  }
+  .project-item img {
+    width: 100%;
+    max-width: max-content
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .content-list1{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .content-list1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+  .project-item img {
+    width: 80%;
+    max-width: max-content
+  }
 }
